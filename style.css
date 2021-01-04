@@ -1,0 +1,75 @@
+.body{
+    margin-top: 45px;
+    margin-bottom: 45px;
+    /*
+    background: linear-gradient(90deg, rgba(17,96,110,1) 0%, rgba(1,138,166,1) 25%, rgba(17,96,110,1) 50%, rgba(1,138,166,1) 75%, rgba(17,96,110,1) 100%);
+    */
+    background-color: white;
+    color:white;
+    }
+
+.leftSide{
+    padding: 100px;
+    border-radius: 10px;
+    margin: 10px;
+    background: linear-gradient(90deg, rgba(149,174,214,1) 0%, rgba(90,139,149,1) 30%, rgba(189,219,224,1) 70%, rgba(142,143,144,1) 100%);
+}
+.rightSide{
+    background-color: blue;
+    padding: 50px;
+    border-radius: 10px;
+    margin: 10px;
+    background: linear-gradient(90deg, rgba(149,174,214,1) 0%, rgba(90,139,149,1) 30%, rgba(189,219,224,1) 70%, rgba(142,143,144,1) 100%);
+   
+}
+
+
+.icon, .icon2{
+    height: 130px;
+    padding-left: 35%;
+
+}
+
+.location-timezone{
+    color: white;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 45px;
+    text-align: center;
+}
+.location-timezone2{
+    color:white;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 45px;
+    text-align: center;
+}
+
+
+.temperature{
+    cursor: pointer;
+}
+
+
+.btn__input{
+
+    border-radius: 4px;
+    cursor:pointer;
+
+}
+
+.temperature2{
+    cursor: pointer;  
+    visibility: hidden;
+}
+
+.temperature-description2{
+    text-align: center;
+    
+    
+}
+
+#visible3{
+    text-align: center;
+}
+#noSe{
+    text-align: center;
+}

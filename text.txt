@@ -1,0 +1,47 @@
+
+   const proxy ="https://cors-anywhere.herokuapp.com/";
+  const iconsUrl= `${proxy}https://api.darksky.net/forecast/fd9d9c6418c23d94745b836767721ad1/${lat},${lon}`;
+
+  fetch(iconsUrl)
+    .then(response => response.json())
+    .then(data => {
+
+      const icon= data.currently.icon;
+      const {temperature, summary, icon} = data.currently;
+                //set DOM Elements from the API
+                temperatureDegree2.textContent = temperature.toFixed(1);
+                temperatureDescription2.textContent = summary;
+                let celcious = (temperature-32) * (5/9);
+                //set icon
+                setIcons(icon,document.querySelector('.icon'));
+
+      temperatureSection2.addEventListener("click",()=>{
+        if(temperatureSpan2.textContent==="F"){
+            temperatureSpan2.textContent = "C";
+            temperatureDegree2.textContent = celcious;
+        } else {
+            temperatureSpan2.textContent="F";  
+            temperatureDegree2.textContent = temperature.toFixed(1);  
+                           
+    }
+  
+    });
+
+
+
+    setIcons(icon,document.querySelector('.icon2'));
+  function setIcons(icon,iconID){
+    const skycons = new Skycons({color:"white"});
+    const currentIcon = icon.replace(/-/g,"_").toUpperCase();
+    skycons.play();
+    return skycons.set(iconID, Skycons[currentIcon]);
+
+
+}
+
+
+  })  .catch(() => {
+    locationTimezone2.textContent = "Error";
+  });
+
+    
